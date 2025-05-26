@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 public class MovementsService {
     public static void main(String[] args) {
         try {
-            HttpServer server = HttpServer.create(new InetSocketAddress(8085), 0);
+            HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", 8085), 0);
             server.createContext("/movimientos", new MovimientosHandler());
             server.setExecutor(null); 
             server.start();
