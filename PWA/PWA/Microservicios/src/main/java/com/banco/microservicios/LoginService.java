@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 public class LoginService {
     public static void main(String[] args) {
         try {
-            HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+            HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", 8081), 0);
             server.createContext("/login", new LoginHandler());
             server.setExecutor(null);
             server.start();
