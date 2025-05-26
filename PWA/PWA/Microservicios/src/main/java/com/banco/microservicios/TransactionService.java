@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 public class TransactionService {
     public static void main(String[] args) {
         try {
-            HttpServer server = HttpServer.create(new InetSocketAddress(8083), 0);           
+            HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", 8083), 0);
             server.createContext("/deposito", new OperacionHandler("deposito"));
             server.createContext("/retiro", new OperacionHandler("retiro"));
             server.createContext("/transferencia", new OperacionHandler("transferencia"));
