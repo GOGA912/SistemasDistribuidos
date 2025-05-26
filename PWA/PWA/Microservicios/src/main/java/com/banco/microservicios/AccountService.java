@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 public class AccountService {
     public static void main(String[] args) {
         try {
-            HttpServer server = HttpServer.create(new InetSocketAddress(8082), 0);
+            HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", 8082), 0);
             server.createContext("/saldo", new SaldoHandler());
             server.setExecutor(null);
             server.start();
