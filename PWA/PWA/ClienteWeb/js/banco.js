@@ -87,13 +87,13 @@ function realizarOperacion(tipo) {
     const monto = parseFloat(document.getElementById("montoDeposito").value);
     if (isNaN(monto) || monto <= 0) return mostrarMensaje("Monto inválido", "red");
     body = { cuenta, monto };
-    url = "http://localhost:8083/deposito";
+    url = "http://130.131.81.210:8083/deposito";
   }
   if (tipo === "retiro") {
     const monto = parseFloat(document.getElementById("montoRetiro").value);
     if (isNaN(monto) || monto <= 0) return mostrarMensaje("Monto inválido", "red");
     body = { cuenta, monto };
-    url = "http://localhost:8083/retiro";
+    url = "http://130.131.81.210:8083/retiro";
   }
   if (tipo === "transferencia") {
     const destino = document.getElementById("cuentaDestino").value;
@@ -105,7 +105,7 @@ function realizarOperacion(tipo) {
       cuentaDestino: destino,
       monto
     };
-    url = "http://localhost:8083/transferencia";
+    url = "http://130.131.81.210:8083/transferencia";
   }
   fetch(url, {
     method: "POST",
@@ -119,7 +119,7 @@ function realizarOperacion(tipo) {
 
 // Saldo con ventana modal
 function consultarSaldo() {
-  fetch(`http://localhost:8082/saldo?cuenta=${cuenta}`)
+  fetch(`http://130.131.81.210:8082/saldo?cuenta=${cuenta}`)
     .then(res => res.text())
     .then(saldo => {
       contenidoModal.innerHTML = `
@@ -133,7 +133,7 @@ function consultarSaldo() {
 
 //Movimientos con ventana modal
 function consultarMovimientos() {
-  fetch(`http://localhost:8085/movimientos?cuenta=${cuenta}`)
+  fetch(`http://130.131.81.210:8085/movimientos?cuenta=${cuenta}`)
     .then(res => res.json())
     .then(data => {
       let html = `
