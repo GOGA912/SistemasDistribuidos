@@ -3,6 +3,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const cuenta = document.getElementById("cuenta").value;
   const nip = parseInt(document.getElementById("nip").value);
   const mensaje = document.getElementById("mensaje");
+  console.log("Enviando:", { numero: cuenta, nip: nip });
   fetch("http://130.131.81.210:8081/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
