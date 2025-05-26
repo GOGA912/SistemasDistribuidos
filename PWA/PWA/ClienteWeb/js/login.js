@@ -3,7 +3,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const cuenta = document.getElementById("cuenta").value;
   const nip = parseInt(document.getElementById("nip").value);
   const mensaje = document.getElementById("mensaje");
-  fetch("http://localhost:8081/login", {
+  fetch("http://130.131.81.210:8081/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ numero: cuenta, nip: nip })
