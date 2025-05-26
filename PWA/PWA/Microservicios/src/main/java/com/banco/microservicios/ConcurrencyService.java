@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 public class ConcurrencyService {
     public static void main(String[] args) {
         try {
-            HttpServer server = HttpServer.create(new InetSocketAddress(8084), 0);
+            HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", 8084), 0);
             server.createContext("/acceso", new AccesoHandler(true));
             server.createContext("/liberar", new AccesoHandler(false));
             server.setExecutor(null); 
