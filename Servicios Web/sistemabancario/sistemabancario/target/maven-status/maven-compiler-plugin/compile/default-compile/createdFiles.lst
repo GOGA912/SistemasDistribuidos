@@ -1,0 +1,16 @@
+com\banco\sistemabancario\config\WebConfig.class
+com\banco\sistemabancario\SistemabancarioApplication.class
+com\banco\sistemabancario\model\TransaccionRequest.class
+com\banco\sistemabancario\service\AutenticacionService.class
+com\banco\sistemabancario\model\Cuenta.class
+com\banco\sistemabancario\model\TransferenciaRequest.class
+com\banco\sistemabancario\service\SaldoService.class
+com\banco\sistemabancario\config\WebConfig$1.class
+com\banco\sistemabancario\service\CuentaService.class
+com\banco\sistemabancario\controller\TransaccionesController.class
+com\banco\sistemabancario\controller\SaldoController.class
+com\banco\sistemabancario\model\LoginRequest.class
+com\banco\sistemabancario\model\SaldoRequest.class
+com\banco\sistemabancario\service\TransaccionesService.class
+com\banco\sistemabancario\controller\CuentaController.class
+com\banco\sistemabancario\controller\AutenticacionController.class
